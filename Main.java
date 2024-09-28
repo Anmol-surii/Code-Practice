@@ -18,10 +18,12 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        CourseScheduleIII cs = new CourseScheduleIII();
+        SingleThreadedCPU cpu = new SingleThreadedCPU();
 
         System.out.println("*****************************************");
-        System.out.println("Answer is " + cs.scheduleCourse(new int[][] {{300, 550}, {800, 1300}, {1200, 1600}, {2300, 3800}}));
+        for(int x : cpu.getOrder(new int[][] {{1,2},{2,4},{3,2},{4,1}})) {
+            System.out.println(x + " ");
+        }
         System.out.println("*****************************************");
     }
 }
