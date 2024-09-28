@@ -18,12 +18,9 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        SingleThreadedCPU cpu = new SingleThreadedCPU();
+        StringCompression sc = new StringCompression();
 
         System.out.println("*****************************************");
-        for(int x : cpu.getOrder(new int[][] {{1,2},{2,4},{3,2},{4,1}})) {
-            System.out.println(x + " ");
-        }
-        System.out.println("*****************************************");
+        sc.compress(new char[]{'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'});
     }
 }
