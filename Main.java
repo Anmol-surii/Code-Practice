@@ -18,9 +18,9 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        StringCompression sc = new StringCompression();
+        EqualRowColumnPairs p = new EqualRowColumnPairs();
 
         System.out.println("*****************************************");
-        sc.compress(new char[]{'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'});
+        System.out.println("Ans: " + p.equalPairs(new int[][]{{3, 2, 1},{1, 7, 6},{2, 7, 7}}));
     }
 }
