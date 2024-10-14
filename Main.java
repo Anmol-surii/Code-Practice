@@ -18,9 +18,17 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        EqualRowColumnPairs p = new EqualRowColumnPairs();
+        // ValidIPAddress p = new ValidIPAddress();
 
-        System.out.println("*****************************************");
-        System.out.println("Ans: " + p.equalPairs(new int[][]{{3, 2, 1},{1, 7, 6},{2, 7, 7}}));
+        // System.out.println("*****************************************");
+        // System.out.println("Ans: " + p.validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334:"));
+
+        String str = "2001:0db8:85a3:0:0:8A2E:0370:7334:";
+        
+        // Split the string by colon
+        String[] parts = str.split("\\:", -1);
+        
+        // Print the size of the result array
+        System.out.println("Size of array: " + parts.length);
     }
 }
