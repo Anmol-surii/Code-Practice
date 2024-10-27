@@ -1,3 +1,7 @@
+import LLD.DecoratorDesignPattern.BasePizza;
+import LLD.DecoratorDesignPattern.CheesePizza;
+import LLD.DecoratorDesignPattern.Pizza;
+import LLD.DecoratorDesignPattern.VeggiePizza;
 import LLD.ObserverDesignPattern.Observable.ConcreteIphoneObservable;
 import LLD.ObserverDesignPattern.Observable.ConcreteShoeObservable;
 import LLD.ObserverDesignPattern.Observable.StocksObservable;
@@ -27,28 +31,16 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        StocksObservable iphoneObservable = new ConcreteIphoneObservable();
-        StocksObservable shoeObservable = new ConcreteShoeObservable();
+        Pizza pizza = new BasePizza();
+        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
 
+        pizza = new CheesePizza(pizza);
+        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
 
-        NotifObserver iphoneOb1 = new PhoneNotifObserver("anmol_suri", iphoneObservable);
-        NotifObserver iphoneOb2 = new EmailNotifObserver("anmolsuri321@gmail.com", iphoneObservable);
+        pizza = new VeggiePizza(pizza);
+        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
 
-        NotifObserver shoeOb1 = new PhoneNotifObserver("arman_suri", shoeObservable);
-        NotifObserver shoeOb2 = new EmailNotifObserver("armansuri321@gmail.com", shoeObservable);
-
-        iphoneObservable.addObserver(iphoneOb1);
-        iphoneObservable.addObserver(iphoneOb2);
-
-        shoeObservable.addObserver(shoeOb1);
-        shoeObservable.addObserver(shoeOb2);
-
-        iphoneObservable.setStockCount(10);
-        iphoneObservable.setStockCount(10);
-        System.out.println(iphoneObservable.getStockCount());
-
-        shoeObservable.setStockCount(26);
-        shoeObservable.setStockCount(32);
-        System.out.println(shoeObservable.getStockCount());
+        pizza = new CheesePizza(pizza);
+        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
     }
 }
