@@ -2,6 +2,11 @@ import LLD.DecoratorDesignPattern.BasePizza;
 import LLD.DecoratorDesignPattern.CheesePizza;
 import LLD.DecoratorDesignPattern.Pizza;
 import LLD.DecoratorDesignPattern.VeggiePizza;
+import LLD.FactoryDesignPattern.Android;
+import LLD.FactoryDesignPattern.IOS;
+import LLD.FactoryDesignPattern.OS;
+import LLD.FactoryDesignPattern.OSFactory;
+import LLD.FactoryDesignPattern.Windows;
 import LLD.ObserverDesignPattern.Observable.ConcreteIphoneObservable;
 import LLD.ObserverDesignPattern.Observable.ConcreteShoeObservable;
 import LLD.ObserverDesignPattern.Observable.StocksObservable;
@@ -31,16 +36,14 @@ class TreeNode {
 
 public class Main {
     public static void main(String[] args) {
-        Pizza pizza = new BasePizza();
-        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
+        OSFactory osFactory = new OSFactory();
+        OS os1 = osFactory.getInstance("open");
+        os1.spec();
 
-        pizza = new CheesePizza(pizza);
-        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
+        OS os2 = osFactory.getInstance("closed");
+        os2.spec();
 
-        pizza = new VeggiePizza(pizza);
-        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
-
-        pizza = new CheesePizza(pizza);
-        System.out.println("Cost of " + pizza.pizzaType() + ": " + pizza.cost());
+        OS os3 = osFactory.getInstance("hello world");
+        os3.spec();
     }
 }
