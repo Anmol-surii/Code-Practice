@@ -1,21 +1,5 @@
-import LLD.DecoratorDesignPattern.BasePizza;
-import LLD.DecoratorDesignPattern.CheesePizza;
-import LLD.DecoratorDesignPattern.Pizza;
-import LLD.DecoratorDesignPattern.VeggiePizza;
-import LLD.FactoryDesignPattern.Android;
-import LLD.FactoryDesignPattern.IOS;
-import LLD.FactoryDesignPattern.OS;
-import LLD.FactoryDesignPattern.OSFactory;
-import LLD.FactoryDesignPattern.Windows;
-import LLD.ObserverDesignPattern.Observable.ConcreteIphoneObservable;
-import LLD.ObserverDesignPattern.Observable.ConcreteShoeObservable;
-import LLD.ObserverDesignPattern.Observable.StocksObservable;
-import LLD.ObserverDesignPattern.Observer.EmailNotifObserver;
-import LLD.ObserverDesignPattern.Observer.NotifObserver;
-import LLD.ObserverDesignPattern.Observer.PhoneNotifObserver;
-import LLD.StrategyDesign.NormalVehicle;
-import LLD.StrategyDesign.SportsVehicle;
-import LLD.StrategyDesign.Vehicle;
+import LLD.DesignPatterns.FactoryDesignPattern.OS;
+import LLD.DesignPatterns.FactoryDesignPattern.OSFactory;
 
 class TreeNode {
     int val;
