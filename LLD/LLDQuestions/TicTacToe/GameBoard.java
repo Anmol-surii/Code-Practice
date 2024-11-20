@@ -11,24 +11,40 @@ public class GameBoard {
 
     public void printBoard() {
         for (int i = 0; i < size; i++) {
+            System.out.print(" ");
+            // Print horizontal line
+            for (int j = 0; j < size; j++) {
+                System.out.print("----");
+            }
+            System.out.println();
+    
+            // Print the row with cell contents
             System.out.print("|");
             for (int j = 0; j < size; j++) {
                 if (board[i][j] != null) {
-                    System.out.print(board[i][j].pieceType.name() + " ");
+                    System.out.print(" " + board[i][j].pieceType.name() + " |");
                 } else {
-                    System.out.print(" ");
+                    System.out.print("   |");
                 }
-                System.out.print("|");
             }
             System.out.println();
         }
+    
+        // Print the bottom line of the board
+        System.out.print(" ");
+        for (int j = 0; j < size; j++) {
+            System.out.print("----");
+        }
+        System.out.println();
     }
 
     public boolean isGameBoardFull() {
-        for (int i = 0, j = 0; i < size; i++, j++) {
+        for (int i = 0; i < size; i++) {
+            for(int j = 0; j < size; j++) {
             if (board[i][j] == null) {
                 return false;
             }
+        }
         }
         return true;
     }

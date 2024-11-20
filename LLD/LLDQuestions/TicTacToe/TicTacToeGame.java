@@ -12,7 +12,7 @@ public class TicTacToeGame {
         players = new LinkedList<>();
 
         Player p1 = new Player("Anmol", new PieceO());
-        Player p2 = new Player("Nonu", new PieceX());
+        Player p2 = new Player("Shreya", new PieceX());
         players.add(p1);
         players.add(p2);
 
@@ -29,7 +29,7 @@ public class TicTacToeGame {
                 return "Game ended in a tie";
             }
 
-            try (Scanner scan = new Scanner(System.in)) {
+            Scanner scan = new Scanner(System.in);
                 String s = scan.nextLine();
                 String[] parts = s.split(",");
 
@@ -47,9 +47,6 @@ public class TicTacToeGame {
                 if(checkWinner(x, y, player.piece)) {
                     return player.getName() + " is the winner";
                 }
-            } catch (NumberFormatException e) {
-                e.printStackTrace();
-            }
         }
     }
 
