@@ -1,4 +1,4 @@
-package LLD.LLDQuestions.LoggerDesign;
+package LLD.DesignPatterns.LoggerDesignChainResponsibiltyPattern;
 
 public enum LogType {
     INFO,
